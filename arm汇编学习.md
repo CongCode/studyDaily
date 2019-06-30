@@ -1,6 +1,9 @@
 learning... 
 ---
-我的基础已经学过8086汇编，目的：使用ida逆向分析arm汇编的so库。参考：https://www.jianshu.com/c/c1915233fab8 和各种文章
+我的基础已经学过8086汇编，目的：使用ida逆向分析arm汇编的so库。参考：https://www.jianshu.com/c/c1915233fab8 和各种文章 
+https://www.cnblogs.com/xiaojiang1025/p/5951461.html  
+https://www.cnblogs.com/lifexy/p/7363208.html  
+https://www.cnblogs.com/armlinux/archive/2011/09/20/2396810.html
 ## 1. 基础数据类型
     byte 0~7 bit
     half word 0~15 bit
@@ -178,7 +181,14 @@ STM:(store much)多数据存储,将寄存器的值存到地址上， 和STR 查�
 而在堆栈操作是STMFD和LDMFD对应，STMFA和LDMFA对应
 
 ## 4. ARM模式与thumb模式  
-    ...
+    ARM模式的指令集宽度是32位而Thumb是16位宽度(但也可以是32位)。
+    知道何时以及如何使用Thumb模式对于ARM漏洞利用的开发尤其重要。
+    ARM状态和Thumb状态可以直接通过某些指令直接切换，都是在运行程序，只不过指令长度不一样而已。
+    
+    在标准32位模式下，可以切换到Thumb模式下，这样的话，代码大小会压缩不少，以此提高空间利用率。
+    同样的代码，如果用Thumb模式的话，比用普通ARM模式的指令，代码大小最大可以减少大约40%。
+    程序可以通过对应的指令，在ARM和Thumb模式之间切换。
+    B、BL、BX、BLX ，X是切换状态
 ## 5. 指令详解
     ...
 ## 6. C语言的分支条件翻译
