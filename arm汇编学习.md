@@ -25,8 +25,8 @@ learning... 参考https://www.jianshu.com/c/c1915233fab8
     例：
     一个int的16进制的整数：0x12345678 在内存中存储
 
-图片备份：http://note.youdao.com/noteshare?id=53249649cfcfaead0a042cf4454f68d4
-![http://note.youdao.com/noteshare?id=53249649cfcfaead0a042cf4454f68d4](E:/Note/big-little.png)
+
+![http://note.youdao.com/noteshare?id=53249649cfcfaead0a042cf4454f68d4](https://github.com/CongCode/studyDaily/blob/master/image/big-little.png)
 #####     个人理解:
     数据（123456）是左边是大的习惯，
     地址是以左边由小开始习惯
